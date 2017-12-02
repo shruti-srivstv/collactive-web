@@ -14,11 +14,11 @@ App.UI = (function(self) {
         { id: 345, title: 'Stay but take in less immigrants', count: 45 }
       ]
     };
-    data = sampleData;
     //Render view
     var source = App.Templates.pollDetails;
     var template = Handlebars.compile(source);
     var html = template(data);
+    return html;
   };
   return self;
 })(App.UI || {});

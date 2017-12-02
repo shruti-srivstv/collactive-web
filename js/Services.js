@@ -3,9 +3,9 @@ App.Services = (function(self) {
     var SERVICE_NAME = 'getPollDetails';
     var options = {
       type: 'GET',
-      url: App.Config.SERVICE_URL + '/+ SERVICE_NAME +/' + pollId,
+      url: App.Config.SERVICE_URL + '/' + SERVICE_NAME + '/' + pollId,
       headers: {
-        userId: App.User.getUserId()
+        userId: App.Core.getUser().getUserId()
       },
       dataType: 'json',
       error: function(xhr) {
