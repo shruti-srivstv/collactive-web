@@ -16,13 +16,14 @@
 <div class="container">
   <header id="header" class="">
   
-      <nav id="topnav">
-        <span>Menu</span>
-        <ul>
-          <li><input type="text" name="search"></li>
+      <nav id="topnavContainer">
+        <ul id="topnav" class="topnav">
+          <li class="institutionName"><span id="institutionName"></span></li>
+          <li class="search"><input placeholder="Search for an issue" type="text" name="search"></li>
           <li><i class="fa fa-plus"></i> <a href="#add-issue" title="">Add an Issue</a></li>
           <li><i class="fa fa-building"></i> <a href="#add-issue" title="">My Organizations</a></li>
           <li><i class="fa fa-sign-out"></i> <a href="#signout" title="">Sign out</a></li>
+          <li class="burger" onclick="toggleMenu()"><a href="javascript:void(0);" ><i class="fa fa-bars"></i></a></li>
         </ul>
       </nav>
 </header><!-- /header -->
