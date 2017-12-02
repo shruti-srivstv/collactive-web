@@ -11,7 +11,7 @@ var App = (function(self, $) {
             if (typeof data == 'undefined' || data.length == 0) {
               alert('Service error: getPollDetails');
             }
-            App.UI.renderPollResut(data);
+            App.UI.renderPollDetails(data);
           },
           function rejectHandler(jqXHR, textStatus, errorThrown) {
             // ...
