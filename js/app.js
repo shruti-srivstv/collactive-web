@@ -17,9 +17,11 @@ var App = (function(self, $) {
               alert('Service error: getPollDetails');
             }
             var divPollDetails = document.getElementById('pollDetails');
+            var divInstitutionName = document.getElementById('institutionName');
             var htmlResult = App.UI.renderPollDetails(data);
             divPollDetails.innerHTML = htmlResult;
             divPollDetails.style.display = 'block';
+            divInstitutionName.innerHTML = data.poll.title;
           },
           function rejectHandler(jqXHR, textStatus, errorThrown) {
             // ...
