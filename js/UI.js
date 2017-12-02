@@ -20,5 +20,13 @@ App.UI = (function(self) {
     var html = template(data);
     return html;
   };
+  window.toggleMenu = function() {
+    var divTopNav = document.getElementById('topnav');
+    if (divTopNav.className === 'topnav') {
+      divTopNav.className += ' responsive';
+    } else {
+      divTopNav.className = 'topnav';
+    }
+  };
   return self;
 })(App.UI || {});
