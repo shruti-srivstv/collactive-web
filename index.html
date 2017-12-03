@@ -18,12 +18,12 @@
   
       <nav id="topnavContainer">
         <ul id="topnav" class="topnav">
-          <li class="institutionName"><span id="institutionName"></span></li>
+          <li class="topBarText"><span id="topBarText"></span></li>
           <li class="search"><input placeholder="Search for an issue" type="text" name="search"></li>
-          <li><i class="fa fa-plus"></i> <a href="#add-issue" title="">Add an Issue</a></li>
+          <li onclick="App.UI.switchToPage('newIssue')"><i class="fa fa-plus"></i> <a href="#add-issue" title="">Add an Issue</a></li>
           <li><i class="fa fa-building"></i> <a href="#add-issue" title="">My Organizations</a></li>
           <li><i class="fa fa-sign-out"></i> <a href="#signout" title="">Sign out</a></li>
-          <li class="burger" onclick="toggleMenu()"><a href="javascript:void(0);" ><i class="fa fa-bars"></i></a></li>
+          <li class="burger"><a href="javascript:void(0);" ><i class="fa fa-bars"></i></a></li>
         </ul>
       </nav>
 </header><!-- /header -->
@@ -40,7 +40,19 @@
     </div> <!-- /page -->
     
     <div id="newIssue" class="page">
-    issue?
+      <h1>Give your issue a name</h1>
+      <div class="new-isssue-box">
+        <input id="new-issue" class="input-box" placeholder="New Issue" type="text" name="new-issue">
+        <button class="btn-propose" onclick="App.submitIssue()">Go</button>
+      </div>
+    </div> <!-- /page -->
+   <div id="chooseVotingOption" class="page">
+      <h1>Choose a voting system</h1>
+      <ul class="voting-system-list">
+        <li>system 1</li>
+        <li>system 2</li>
+        <li>system 3</li>
+      </ul>
     </div> <!-- /page -->
 
 </div> <!-- /pages -->

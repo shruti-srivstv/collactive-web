@@ -49,6 +49,12 @@ App.UI = (function(self) {
     $('.page').hide();
     $('#' + id).show();
   };
+  self.applyBindings = function() {
+    //nav menu toggle
+    $('#topnav li').click(function() {
+      toggleMenu();
+    });
+  };
   window.toggleMenu = function() {
     var divTopNav = document.getElementById('topnav');
     if (divTopNav.className === 'topnav') {

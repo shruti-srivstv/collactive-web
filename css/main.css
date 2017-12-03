@@ -51,7 +51,7 @@ body {
     box-sizing: border-box;
         margin-bottom: 10px;
 }
-.topnav li:hover:not(.institutionName):not(.search) {
+.topnav li:hover:not(.topBarText):not(.search) {
   background-color: #ddd;
   color: black;
 }
@@ -69,7 +69,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .topnav li:not(:first-child) {display: none;}
-  .topnav li.institutionName {
+  .topnav li.topBarText {
     text-align: center;
     float: none;
     position: absolute;
@@ -77,7 +77,7 @@ body {
         font-size: 20px;
     padding-top: 8px;
   }
-  .topnav.responsive li.institutionName {
+  .topnav.responsive li.topBarText {
     display: none;
   }
   .topnav li.burger {
@@ -105,7 +105,7 @@ body {
       padding-top: 4px;
     padding-bottom: 1px;
   }
-  .topnav.responsive li:not(.institutionName):not(.search):not(.burger) {
+  .topnav.responsive li:not(.topBarText):not(.search):not(.burger) {
       border-bottom: 1px solid #cecece;
 }
 }
@@ -138,6 +138,7 @@ body {
     color: white;
     margin-top: 12px;
     font-size: 16px;
+    min-width: 81px;
 }
 .btn-propose:focus,
 .btn-propose:active {
@@ -145,4 +146,18 @@ body {
 }
 .page {display: none;    padding-top: 16px;} 
 
-
+.page > h1 {
+      font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 12px;
+}
+.input-box {
+      margin: 0 auto;
+    display: block;
+    padding: 6px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 15px;
+    border: 1px solid #d6d6d6;
+}

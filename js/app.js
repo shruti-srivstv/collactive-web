@@ -17,7 +17,7 @@ var App = (function(self, $) {
               alert('Service error: getPollDetails');
             }
             var divPollDetails = document.getElementById('pollDetails');
-            var divInstitutionName = document.getElementById('institutionName');
+            var divInstitutionName = document.getElementById('topBarText');
             var htmlResult = App.UI.renderPollDetails(data);
             divPollDetails.innerHTML = htmlResult;
             divPollDetails.style.display = 'block';
@@ -32,10 +32,17 @@ var App = (function(self, $) {
           // ...
         });
     }
+    App.UI.applyBindings();
   };
   return self;
 })(App || {}, jQuery);
 
+App.submitIssue = function(issue) {
+  //update title.
+  var val = document.getElementById('new-issue').value;
+  $('#topBarText').html(val);
+  App.UI.switchToPage('chooseVotingOption');
+};
 App.Core = (function(self, $) {
   self.login = function() {
     //TODO: user auth.
