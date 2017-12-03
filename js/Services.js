@@ -1,11 +1,12 @@
-App.Services = (function(self) {
+  App.Services = (function(self) {
   self.getPollDetails = function(pollId) {
-    var SERVICE_NAME = 'getPollDetails';
+    var SERVICE_NAME = 'poll';
     var options = {
       type: 'GET',
       url: App.Config.SERVICE_URL + '/' + SERVICE_NAME + '/' + pollId,
       headers: {
-        userId: App.Core.getUser().getUserId()
+        userId: App.Core.getUser().getUserId(),
+        "content" : "Application/JSON"
       },
       dataType: 'json',
       error: function(xhr) {
