@@ -22,6 +22,7 @@ var App = (function(self, $) {
             divPollDetails.innerHTML = htmlResult;
             divPollDetails.style.display = 'block';
             divInstitutionName.innerHTML = data.poll.title;
+            App.UI.createPollChart(data);
           },
           function rejectHandler(jqXHR, textStatus, errorThrown) {
             // ...

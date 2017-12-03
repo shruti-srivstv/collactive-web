@@ -3,6 +3,10 @@ Top nav
 */
 body {
   margin:0;
+      font-family: sans-serif;
+}
+.vote-standings-header {
+  font-weight: bold;
 }
 .topnav {
   overflow: hidden;
@@ -117,7 +121,28 @@ body {
   width: 100%;
 }
 
-
+#pollDetails {
+  padding: 24px 12px 0 19px;
+}
+.canvas-wrapper {
+  width: 85%;
+      margin: 0 auto;
+}
+.btn-propose {
+    margin: 0 auto;
+    display: block;
+    font-size: 16px;
+    padding: 6px;
+    border: none;
+    background-color: #e45959;
+    color: white;
+    margin-top: 12px;
+    font-size: 16px;
+}
+.btn-propose:focus,
+.btn-propose:active {
+  border:none;
+}
 .page {display: none;    padding-top: 16px;} 
 
 

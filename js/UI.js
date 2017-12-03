@@ -20,6 +20,35 @@ App.UI = (function(self) {
     var html = template(data);
     return html;
   };
+  self.createPollChart = function(data) {
+    var ctx = document.getElementById('vote-chart').getContext('2d');
+
+    var labels = [];
+    var values = [];
+    data.answers.map(function(el) {
+      labels.push(el.title + ' (' + el.count + ')');
+      values.push(el.count);
+    });
+
+    var chartData = {
+      labels: labels,
+      datasets: [
+        {
+          label: 'My First Dataset',
+          data: values,
+          backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)']
+        }
+      ]
+    };
+    var myPieChart = new Chart(ctx, {
+      type: 'pie',
+      data: chartData
+    });
+  };
+  self.switchToPage = function(id) {
+    $('.page').hide();
+    $('#' + id).show();
+  };
   window.toggleMenu = function() {
     var divTopNav = document.getElementById('topnav');
     if (divTopNav.className === 'topnav') {
