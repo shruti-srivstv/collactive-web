@@ -4,10 +4,8 @@
     var options = {
       type: 'GET',
       url: App.Config.SERVICE_URL + '/' + SERVICE_NAME + '/' + pollId,
-      headers: {
-        userId: App.Core.getUser().getUserId(),
-        "content" : "Application/JSON"
-      },
+      contentType: "application/json",
+
       dataType: 'json',
       error: function(xhr) {
         alert('Service unavailable: ' + SERVICE_NAME);

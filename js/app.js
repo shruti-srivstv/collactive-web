@@ -61,6 +61,6 @@ App.Core = (function(self, $) {
 })(App.Core || {}, jQuery);
 
 App.Config = (function(self, $) {
-  self.SERVICE_URL = 'https://collactive.herokuapp.com/poll/get';
+  self.SERVICE_URL = 'https://collactive.herokuapp.com';
   return self;
 })(App.Core || {}, jQuery);
